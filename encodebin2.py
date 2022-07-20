@@ -18,6 +18,10 @@ for i in range(num_in):
 
 source = open("Iris.txt",'r')
 for line in source:
-    aux = line[0:-1].split(',')
+    aux = line[0:-1].split(' ')
+    aux = aux[1::]
+    if aux==[]:
+        break
+    print(aux)
     for i in range(num_in):
         files_dict[i].write(float2bin(8, 18, float(aux[i]))+',\n')
