@@ -22,6 +22,5 @@ for line in source:
     aux = aux[1::]
     if aux==[]:
         break
-    print(aux)
     for i in range(num_in):
         files_dict[i].write(float2bin(8, 18, float(aux[i]))+',\n')
